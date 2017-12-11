@@ -3,6 +3,7 @@
     <title>{{ .Title }}</title>{{ if .Site.Params.Favicon }}
     <link rel="shortcut icon" href="{{ .Site.Params.Favicon }}">{{ end }}
     <link rel="stylesheet" href="css/slate.css">
+    <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
 </head>
 
 <body{{ if .Site.Params.BackgroundStyle }} style='background: {{ .Site.Params.BackgroundStyle | safeCSS }};'{{ end }}
@@ -13,7 +14,7 @@
 <div class="container">{{ partial "tile_slate.html" . }}
 </div>
 
-</body>
-<link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+{{ template "_internal/google_analytics.html" . }}
 <script src="js/slate.js"></script>
+</body>
 </html>
